@@ -26,35 +26,14 @@
                 <li><a href="#sobre-nos">Sobre nós</a></li>
                 <li class="dropdown">
                     <a href="#">Setores</a>
-                    <ul class="submenu" id="lista-setores"></ul>
+                    <ul class="submenu">
+						<li><a href="/engenharia">Engenharia</a></li>
+						<li><a href="/engenharia">Arquitetura</a></li>
+						<li><a href="/engenharia">Incorporações</a></li>
+						<li><a href="/engenharia">Infraestrutura</a></li>
+					</ul>
                </li>
         </nav>
      </header>
-	<script>
-		// 1. ARRAY DE DADOS
-		const itensMenu = [
-			{ texto: "Engenharia", link:"/engenharia"},
-			{ texto: "Arquitetura", link:"/arquitetura"},
-			]
-		// 2. LÓGICA
-    const listMenu = document.getElementById("lista-setores");
-    
-    // VERIFICAÇÃO CHAVE
-    if (listMenu) { 
-        itensMenu.forEach(item => {
-            const newLi = document.createElement("li");
-            const newA = document.createElement("a");
-            
-            newA.href = item.link;
-            newA.textContent = item.texto;
-            
-            newLi.appendChild(newA);
-            listMenu.appendChild(newLi);
-        });
-    } else {
-        // Se isto aparecer na Consola do Navegador, o problema é o ID no HTML!
-        console.error("Erro: O contentor com ID 'lista-setores' não foi encontrado.");
-    }
-	</script>
 </body>
 </html>
