@@ -13,108 +13,6 @@
     <title>Grupo Santwal - Construindo o seu Santuário</title>
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" sizes="100x100" href="src/logo_tab.png">
-
-	<style>
-		.header-fixed {
-			position: fixed;
-			top: 0;
-			width: 100%;
-			background-color: rgba(0, 0, 0, 0.8);
-			z-index: 1000;
-			box-shadow: 0 2px 5px rgba(0, 0 , 0, 0.2);
-			padding: 20px 0;
-		}
-
-		.header-container {
-			max-width: 1200px;
-    		margin: 0 auto;
-    		padding: 0 2px;
-    		display: flex;
-    		justify-content: space-between;
-    		align-items: center;
-		}
-
-		.logo img {
-			height: 50px;
-    		width: auto;
-		}
-
-		.menu-hamburguer {
-			display: flex;
-			flex-direction: column;
-    		gap: 6px;
-			z-index: 1100;
-		}
-		
-		.bar {
-			display: block;
-			width: 30px;
-			height: 3px;
-			background-color: white;
-			border-radius: 2px;
-			transition: all 0.4s ease-in-out;
-		}
-		.menu-navegation {
-			display: none;
-		}
-
-		@media (min-width: 768px) {
-			.menu-hamburguer {
-				display: none;
-			}
-			
-			.menu-navegation {
-				display: block !important; /* !important garante que sobrescreve o 'display: none' */
-    		}
-
-			.menu-navegation ul {
-				display: flex; /* Itens lado a lado */
-	        	list-style: none;
-	        	gap: 25px;
-	        	margin: 0;
-		        padding: 0;
-			}
-	
-			.menu-navegation a {
-				color: white;
-	        	text-decoration: none;
-	        	padding: 5px 10px;
-    		}
-		}
-		
-		.menu-navegation.on {
-			display: block;
-    		position: absolute;
-    		top: 100%;
-    		left: 0;
-    		width: 100%;
-    		background-color: gray;
-		    text-align: center;
-		}
-		.menu-navegation.on ul {
-			list-style: none;
-    		padding: 0;
-    		margin: 0;
-		}
-		.menu-navegation.on li {
-			border-bottom: 1px solid #555;
-		}
-		.menu-navegation.on a {
-			display: block;
-    		color: white;
-    		padding: 15px;
-    		text-decoration: none;
-		}
-		.menu-hamburguer.on .bar:nth-child(1) {
-			transform: translateY(9px) rotate(45deg);
-		}
-		.menu-hamburguer.on .bar:nth-child(2) {
-			opacity: 0;
-		}
-		.menu-hamburguer.on .bar:nth-child(3) {
-			transform: translateY(-9px) rotate(-45deg);
-		}
-	</style>
 </head>
     
 <body>
@@ -145,16 +43,5 @@
 			</div>
     </header>
 
-	<main style="height: 200vh; padding-top: 100px;">
-
-	<script>
-		const btnMenu = document.getElementById('btnMenu');
-		const menuNavegation = document.getElementById('menuNavegation');
-
-		btnMenu.addEventListener('click' , () => {
-			menuNavegation.classList.toggle('on');
-			btnMenu.classList.toggle('on');
-		});
-	</script>
 </body>
 </html>
