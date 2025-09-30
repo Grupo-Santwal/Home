@@ -26,13 +26,27 @@
                 <li><a href="#sobre-nos">Sobre nós</a></li>
                 <li class="dropdown">
                     <a href="#">Setores</a>
-                    <ul class="submenu" id="menu-serviços">
-                        <li><a href="/engenharia">Engenharia</a></li>
-                        <li><a href="/arquitetura">Arquitetura</a></li>
-						<li><a href="/engenharia">Infraestrutura</a></li>
-					</ul>
+                    <ul class="submenu" id="lista-setores"></ul>
                </li>
         </nav>
      </header>
+	<script>
+		// 1. ARRAY DE DADOS
+		const itensMenu = [
+			{ texto: "Engenharia", link:"/engenharia"},
+			{ texto: "Arquitetura", link:"/arquitetura"},
+			]
+		// 2. LÓGICA
+		const listMenu = document.getElementById("lista-setores");
+		itensMenu.forEach(item => {
+			const newLi = document.createElement("li");
+			const newA = document.createElement("a");
+
+			newA.href = item.link;
+			newA.textContent = item.texto;
+			newLi.appendchild(newA);
+			listMenu.appendChild(newLi);
+		})
+	</script>
 </body>
 </html>
