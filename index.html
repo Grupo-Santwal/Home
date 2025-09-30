@@ -22,7 +22,7 @@
 			background-color: rgba(0, 0, 0, 0.8);
 			z-index: 1000;
 			box-shadow: 0 2px 5px rgba(0, 0 , 0, 0.2);
-			padding: 10px 0;
+			padding: 2px 0;
 		}
 
 		.header-container {
@@ -55,9 +55,35 @@
 			heigth: 3px;
 			background-color: white;
 		}
-
 		.menu-navegation {
+			display: none;
+		}
 
+		@media (min-width: 768px) {
+			.menu-hamburguer {
+				display: none;
+			}
+			
+			.menu-navegation {
+				display: block !important; /* !important garante que sobrescreve o 'display: none' */
+    		}
+
+			.menu-navegation ul {
+				display: flex; /* Itens lado a lado */
+	        	list-style: none;
+	        	gap: 25px;
+	        	margin: 0;
+		        padding: 0;
+			}
+	
+			.menu-navegation a {
+				color: white;
+	        	text-decoration: none;
+	        	padding: 5px 10px;
+    		}
+		}
+
+			
 		h1 { color: #1a73e8; }
 	</style>
 </head>
@@ -90,6 +116,10 @@
 			</div>
     </header>
 
-	<main style="height: 200vh; padding-top: 100px;"
+	<main style="height: 200vh; padding-top: 100px;">
+
+	<script>
+		const btnMenu = document.getElementById('btnMenu');
+	</script>
 </body>
 </html>
