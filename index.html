@@ -16,27 +16,33 @@
 </head>
     
 <body>
-    <header id="Página Inicial">
-        <nav>
-            <div class="logotipo">
-                <img
-                    src="src/logotipohome.png"
-                    alt="logotipohome.png"
-                    width="150"
-                    height="50">
-            </div>
-            <ul>
-                <li><a href="#sobre-nos">Sobre nós</a></li>
-                <li class="dropdown">
-                    <a href="#">Setores</a>
-                    <ul class="submenu">
-						<li><a href="/engenharia">Engenharia</a></li>
-						<li><a href="/engenharia">Arquitetura</a></li>
-						<li><a href="/engenharia">Incorporações</a></li>
-						<li><a href="/engenharia">Infraestrutura</a></li>
+    <header class="header-fixed">
+            <div class="header-container">
+				<a href="/" class="logo">
+                	<img
+                    	src="src/logotipohome.png"
+                    	alt="logotipohome.png"
+                    	width="150">
+				</a>
+
+				<button class="menu-hamburguer" id="btnMenu">
+					<!-- INSERE AS BARRAS DO MENU -->
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+					
+				<nav class="menu-navegation" id="menuNavegation">
+            		<ul>
+						<li><a href="#inicio">Início</a></li>
+						<li><a href="#serviços">Serviços</a></li>
+						<li><a href="#sobre">Sobre</a></li>
+						<li><a href="#contato">Contato</a></li>
 					</ul>
-               </li>
-        </nav>
-     </header>
+               </nav>
+			</div>
+    </header>
+
+	<main style="height: 200vh; padding-top: 100px;"
 </body>
 </html>
