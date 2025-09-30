@@ -54,6 +54,8 @@
 			width: 30px;
 			heigth: 3px;
 			background-color: white;
+			border-radius: 2px;
+			transition: all 0.3s;
 		}
 		.menu-navegation {
 			display: none;
@@ -83,6 +85,29 @@
     		}
 		}
 
+		.menu-navegation.ativo {
+			display: block;
+    		position: absolute;
+    		top: 100%;
+    		left: 0;
+    		width: 100%;
+    		background-color: #333;
+		    text-align: center;
+		}
+		.menu-navegation.ativo ul {
+			list-style: none;
+    		padding: 0;
+    		margin: 0;
+		}
+		.menu-navegation.ativo li {
+			border-bottom: 1px solid #555;
+		}
+		.menu-navegation.ativo a {
+			display: block;
+    		color: white;
+    		padding: 15px;
+    		text-decoration: none;
+		}
 			
 		h1 { color: #1a73e8; }
 	</style>
@@ -107,10 +132,10 @@
 					
 				<nav class="menu-navegation" id="menuNavegation">
             		<ul>
-						<li><a href="#inicio">Início</a></li>
-						<li><a href="#serviços">Serviços</a></li>
-						<li><a href="#sobre">Sobre</a></li>
-						<li><a href="#contato">Contato</a></li>
+						<li><a href="https:gruposantwal.github.io">Início</a></li>
+						<li><a href="/serviços">Serviços</a></li>
+						<li><a href="/sobre">Sobre</a></li>
+						<li><a href="/contato">Contato</a></li>
 					</ul>
                </nav>
 			</div>
@@ -120,6 +145,12 @@
 
 	<script>
 		const btnMenu = document.getElementById('btnMenu');
+		const menuNavegation = document.getElementById('menuNavegation');
+
+		btnMenu.addEventListener('click' , () => {
+			menuNavegation.classList.toggle('ativo');
+			btnMenu.classList.toggle('aberto');
+		});
 	</script>
 </body>
 </html>
