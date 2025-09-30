@@ -82,7 +82,7 @@
     		}
 		}
 		
-		.menu-navegation.ativo {
+		.menu-navegation.on {
 			display: block;
     		position: absolute;
     		top: 100%;
@@ -91,27 +91,27 @@
     		background-color: gray;
 		    text-align: center;
 		}
-		.menu-navegation.ativo ul {
+		.menu-navegation.on ul {
 			list-style: none;
     		padding: 0;
     		margin: 0;
 		}
-		.menu-navegation.ativo li {
+		.menu-navegation.on li {
 			border-bottom: 1px solid #555;
 		}
-		.menu-navegation.ativo a {
+		.menu-navegation.on a {
 			display: block;
     		color: white;
     		padding: 15px;
     		text-decoration: none;
 		}
-		.menu-hamburguer.ativo .barra:nth-child(1) {
+		.menu-hamburguer.on .bar:nth-child(1) {
 			transform: translateY(9px) rotate(45deg);
 		}
-		.menu-hamburguer.ativo .barra:nth-child(2) {
+		.menu-hamburguer.on .bar:nth-child(2) {
 			opacity: 0;
 		}
-		.menu-hamburguer.ativo .barra:nth-child(3) {
+		.menu-hamburguer.on .bar:nth-child(3) {
 			transform: translateY(-9px) rotate(-45deg);
 		}
 	</style>
@@ -152,8 +152,8 @@
 		const menuNavegation = document.getElementById('menuNavegation');
 
 		btnMenu.addEventListener('click' , () => {
-			menuNavegation.classList.toggle('ativo');
-			btnMenu.classList.toggle('ativo');
+			menuNavegation.classList.toggle('on');
+			btnMenu.classList.toggle('on');
 		});
 	</script>
 </body>
