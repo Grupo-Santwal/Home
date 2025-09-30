@@ -37,16 +37,24 @@
 			{ texto: "Arquitetura", link:"/arquitetura"},
 			]
 		// 2. LÓGICA
-		const listMenu = document.getElementById("lista-setores");
-		itensMenu.forEach(item => {
-			const newLi = document.createElement("li");
-			const newA = document.createElement("a");
-
-			newA.href = item.link;
-			newA.textContent = item.texto;
-			newLi.appendchild(newA);
-			listMenu.appendChild(newLi);
-		})
+    const listMenu = document.getElementById("lista-setores");
+    
+    // VERIFICAÇÃO CHAVE
+    if (listMenu) { 
+        itensMenu.forEach(item => {
+            const newLi = document.createElement("li");
+            const newA = document.createElement("a");
+            
+            newA.href = item.link;
+            newA.textContent = item.texto;
+            
+            newLi.appendChild(newA);
+            listMenu.appendChild(newLi);
+        });
+    } else {
+        // Se isto aparecer na Consola do Navegador, o problema é o ID no HTML!
+        console.error("Erro: O contentor com ID 'lista-setores' não foi encontrado.");
+    }
 	</script>
 </body>
 </html>
